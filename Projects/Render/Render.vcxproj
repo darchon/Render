@@ -11,14 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Code\Geometry\Triangle.cpp" />
     <ClCompile Include="..\..\Code\Input\Input.cpp" />
     <ClCompile Include="..\..\Code\main.cpp" />
+    <ClCompile Include="..\..\Code\Render\ColorShader.cpp" />
     <ClCompile Include="..\..\Code\Render\DX11Render.cpp" />
     <ClCompile Include="..\..\Code\Render\Graphics.cpp" />
     <ClCompile Include="..\..\Code\System\System.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Code\Geometry\Triangle.h" />
     <ClInclude Include="..\..\Code\Input\Input.h" />
+    <ClInclude Include="..\..\Code\Render\ColorShader.h" />
     <ClInclude Include="..\..\Code\Render\DX11Render.h" />
     <ClInclude Include="..\..\Code\Render\Graphics.h" />
     <ClInclude Include="..\..\Code\Render\IRender.h" />

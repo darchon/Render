@@ -22,6 +22,9 @@
     <Filter Include="Input">
       <UniqueIdentifier>{33d13f74-56d5-4675-9b05-75fd94f1db84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{86da2d12-7f70-4638-a6c7-9cdaa1e095b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Code\main.cpp">
@@ -39,6 +42,12 @@
     <ClCompile Include="..\..\Code\Render\DX11Render.cpp">
       <Filter>Render</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Code\Geometry\Triangle.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Code\Render\ColorShader.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Code\System\System.h">
@@ -54,6 +63,12 @@
       <Filter>Render</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Code\Render\DX11Render.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Code\Geometry\Triangle.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Code\Render\ColorShader.h">
       <Filter>Render</Filter>
     </ClInclude>
   </ItemGroup>
