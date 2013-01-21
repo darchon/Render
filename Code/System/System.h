@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Filename: System.h
 ////////////////////////////////////////////////////////////////////////////////
-#ifndef _SYSTEMCLASS_H_
-#define _SYSTEMCLASS_H_
+#ifndef _SYSTEM_H_
+#define _SYSTEM_H_
 
 ///////////////////////////////
 // PRE-PROCESSING DIRECTIVES //
@@ -14,6 +14,7 @@
 //////////////
 #include <windows.h>
 
+#include "MessageLogger.h"
 #include "..\Input\Input.h"
 #include "..\Render\IRender.h"
 
@@ -22,39 +23,45 @@
 /////////////////////////
 static LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-////////////////////////////////////////////////////////////////////////////////
-// Class name: SystemClass
-////////////////////////////////////////////////////////////////////////////////
-class SystemClass
+class System
 {
 public:
-	SystemClass();
-	SystemClass(const SystemClass&);
-	~SystemClass();
+	static System* Instance();
 
 	bool Initialize();
 	void Shutdown();
 	void Run();
 
+	//Helpers
+	HWND GetWindowsHandle() const;
+
 	LRESULT CALLBACK MessageHandler(HWND, UINT, WPARAM, LPARAM);
 
 private:
+	System();
+	System(const System&);
+	System& operator= (System const&);
+	~System();
+
 	bool Frame();
 	void InitializeWindows(int&, int&);
 	void ShutdownWindows();
 
 private:
-	LPCWSTR m_applicationName;
-	HINSTANCE m_hinstance;
-	HWND m_hwnd;
+	static System*	m_inst;
 
-	InputClass* m_Input;
-	IRender* m_Graphics;
+	LPCWSTR			m_applicationName;
+	HINSTANCE		m_hinstance;
+	HWND			m_hwnd;
+
+	InputClass*		m_Input;
+	IRender*		m_Graphics;
+	MessageLogger*	m_Logger;
 };
 
 /////////////
 // GLOBALS //
 /////////////
-static SystemClass* ApplicationHandle = 0;
+//static System* ApplicationHandle = 0;
 
 #endif

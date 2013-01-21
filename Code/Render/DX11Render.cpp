@@ -2,6 +2,7 @@
 * DX11Render.cpp
 ******************************/
 #include "DX11Render.h"
+#include "../System/MessageManager.h"
 
 
 DX11Render::DX11Render()
@@ -297,6 +298,8 @@ bool DX11Render::Initialize(int screenWidth, int screenHeight, bool fullscreen, 
 	//create orthogonal projection matrix
 	D3DXMatrixOrthoLH(&m_orthoMatrix, (float)screenWidth, (float)screenHeight, SCREEN_NEAR, SCREEN_DEPTH);
 
+	//Tell someone we did well
+	MessageManager::Instance()->NotifyHandlers(DEFAULT_MSG, "Default:\t DX11Renderer Init Complete.");
 	return true;
 }
 

@@ -17,6 +17,8 @@
     <ClCompile Include="..\..\Code\Render\ColorShader.cpp" />
     <ClCompile Include="..\..\Code\Render\DX11Render.cpp" />
     <ClCompile Include="..\..\Code\Render\Graphics.cpp" />
+    <ClCompile Include="..\..\Code\System\MessageLogger.cpp" />
+    <ClCompile Include="..\..\Code\System\MessageManager.cpp" />
     <ClCompile Include="..\..\Code\System\System.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -26,6 +28,8 @@
     <ClInclude Include="..\..\Code\Render\DX11Render.h" />
     <ClInclude Include="..\..\Code\Render\Graphics.h" />
     <ClInclude Include="..\..\Code\Render\IRender.h" />
+    <ClInclude Include="..\..\Code\System\MessageLogger.h" />
+    <ClInclude Include="..\..\Code\System\MessageManager.h" />
     <ClInclude Include="..\..\Code\System\System.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
